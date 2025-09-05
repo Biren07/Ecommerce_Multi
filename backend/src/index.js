@@ -10,7 +10,8 @@ import bodyParser from "body-parser";
 import logger from "./middlewares/logger.js";
 import auth from "./middlewares/auth.js";
 import userRouter from "./routes/userRoute.js"
-import authRoutes from "./routes/authRoute.js"
+import authRoutes from "./routes/authRoute.js";
+import productRoutes from "./routes/productRoute.js";
 
 const app = express();
 const upload =multer({storage:multer.memoryStorage()});
@@ -25,7 +26,8 @@ app.use(bodyParser.json());
 app.use(logger);
 
 app.use("/api/auth", authRoutes);
-app.use("/api/users",auth,upload.single("image"),userRouter)
+app.use("/api/users",auth,upload.single("image"),userRouter);
+app.use("/api/products",upload.array("images",5),productRoutes);
 app.listen(config.port, () => {
   console.log(`Server is running ${config.port}...`);
 });

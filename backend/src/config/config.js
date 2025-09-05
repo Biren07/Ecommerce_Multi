@@ -12,5 +12,9 @@ const config = {
   },
   jwtSecret: process.env.JWT_SECRET || "",
   emailApiKey: process.env.EMAIL_API_KEY || "",
+    gemini: {
+    url: process.env.GEMINI_URL || "",
+    apiKey: process.env.GEMINI_API_KEY || "",
+  },
 };
 export default config;
