@@ -6,6 +6,7 @@ It provides APIs for authentication, user management, product management, role-b
 The backend is built with Node.js, Express, and MongoDB.
 
 📂 Project Structure
+
 backend/
 │── node_modules/
 │── src/
