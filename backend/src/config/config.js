@@ -16,5 +16,10 @@ const config = {
     url: process.env.GEMINI_URL || "",
     apiKey: process.env.GEMINI_API_KEY || "",
   },
+   khalti: {
+    apiKey: process.env.KHALTI_API_KEY || "",
+    apiUrl: process.env.KHALTI_API_URL || "",
+    returnUrl: process.env.KHALTI_RETURN_URL || "",
+  },
 };
 export default config;
